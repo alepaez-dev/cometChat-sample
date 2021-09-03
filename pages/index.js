@@ -1,23 +1,70 @@
-import Head from 'next/head'
-import dynamic from "next/dynamic";
-import React, { useEffect } from 'react';
 
-const CometChatNoSSR = dynamic(
-  () => import('components/CometChatNOSSR'),
-  { ssr: false }
-); 
-
-
-export default function Home() {
-
-
-  useEffect(()=>{
-    window.CometChat=require('@cometchat-pro/chat').CometChat
-  });
-
-  return (
-    <div>
-      <CometChatNoSSR />
-    </div>
-  )
-}
+export {
+	CometChatIncomingCall,
+	CometChatOutgoingCall,
+	CometChatIncomingDirectCall,
+	CometChatOutgoingDirectCall,
+	CometChatConversationList,
+	CometChatConversationListItem,
+	CometChatConversationListWithMessages,
+	CometChatCreateGroup,
+	CometChatGroupDetails,
+	CometChatGroupList,
+	CometChatGroupListItem,
+	CometChatViewGroupMemberList,
+	CometChatViewGroupMemberListItem,
+	CometChatAddGroupMemberList,
+	CometChatAddGroupMemberListItem,
+	CometChatBanGroupMemberList,
+	CometChatBanGroupMemberListItem,
+	CometChatGroupListWithMessages,
+	CometChatSmartReplyPreview,
+	CometChatStickerKeyboard,
+	CometChatMessageReactions,
+	CometChatCreatePoll,
+	CometChatReceiverDocumentBubble,
+	CometChatReceiverPollMessageBubble,
+	CometChatReceiverStickerMessageBubble,
+	CometChatReceiverWhiteboardBubble,
+	CometChatSenderDocumentBubble,
+	CometChatSenderPollMessageBubble,
+	CometChatSenderStickerBubble,
+	CometChatSenderWhiteboardBubble,
+	CometChatActionMessageBubble,
+	CometChatDeleteMessageBubble,
+	CometChatEmojiKeyboard,
+	CometChatImageViewer,
+	CometChatLinkPreview,
+	CometChatLiveReactions,
+	CometChatMessageActions,
+	CometChatMessageComposer,
+	CometChatMessageHeader,
+	CometChatMessageList,
+	CometChatMessages,
+	CometChatMessageThread,
+	CometChatReadReceipt,
+	CometChatReceiverAudioMessageBubble,
+	CometChatReceiverDirectCallBubble,
+	CometChatReceiverFileMessageBubble,
+	CometChatReceiverImageMessageBubble,
+	CometChatReceiverTextMessageBubble,
+	CometChatReceiverVideoMessageBubble,
+	CometChatSenderAudioMessageBubble,
+	CometChatSenderDirectCallBubble,
+	CometChatSenderFileMessageBubble,
+	CometChatSenderImageMessageBubble,
+	CometChatSenderTextMessageBubble,
+	CometChatSenderVideoMessageBubble,
+	CometChatThreadedMessageReplyCount,
+	CometChatAvatar,
+	CometChatBackdrop,
+	CometChatBadgeCount,
+	CometChatUserPresence,
+	CometChatToastNotification,
+	CometChatUI,
+	CometChatUserProfile,
+	CometChatUserDetails,
+	CometChatUserList,
+	CometChatUserListItem,
+	CometChatUserListWithMessages,
+} from "./components";
